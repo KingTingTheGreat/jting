@@ -11,7 +11,7 @@ const StringLink = ({ link }: { link: string }) => {
 	);
 };
 
-export const NavLinks = () => {
+const NavLinks = () => {
 	return (
 		<nav className="flex p-1 w-full justify-around bg-[#333]">
 			{internalLinks.map((link) => (
@@ -20,3 +20,5 @@ export const NavLinks = () => {
 		</nav>
 	);
 };
+
+export default NavLinks;
