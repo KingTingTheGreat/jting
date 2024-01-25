@@ -1,6 +1,6 @@
-import { LinkType } from "@/types";
+import { exLink } from "@/types";
 
-const externalLinks: LinkType[] = [
+const externalLinks: exLink[] = [
 	{
 		name: "GitHub",
 		url: "https://github.com/kingtingthegreat/",

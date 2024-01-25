@@ -1,9 +1,9 @@
-import { LinkType } from "@/types";
+import { exLink } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 import externalLinks from "@/data/externalLinks";
 
-const LinkWrapper = ({ link }: { link: LinkType }) => {
+const LinkWrapper = ({ link }: { link: exLink }) => {
 	return (
 		<div className="items-center text-center p-1.5 m-2 bg-black rounded-lg border-2 border-[#666] border-solid bg-[#62a590]">
 			<Link href={link.url} target="_blank" type={link.type ?? ""}>
