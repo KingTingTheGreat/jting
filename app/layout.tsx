@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
 	title: "Jeffrey Ting",
@@ -17,7 +15,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className="min-h-screen">
+				<Header />
 				{children}
 				<Analytics />
 			</body>
