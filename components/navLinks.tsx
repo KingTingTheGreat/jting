@@ -1,5 +1,5 @@
 import Link from "next/link";
-import internalLinks from "@/data/internalLinks";
+import internalPages from "@/data/internalPages";
 
 const StringLink = ({ link }: { link: string }) => {
 	// ensure the link is lowercase
@@ -14,8 +14,8 @@ const StringLink = ({ link }: { link: string }) => {
 const NavLinks = () => {
 	return (
 		<nav className="flex p-1 w-full justify-around bg-[#333]">
-			{internalLinks.map((link) => (
-				<StringLink key={link} link={link} />
+			{Object.entries(internalPages).map(([key]) => (
+				<StringLink key={key} link={key} />
 			))}
 		</nav>
 	);

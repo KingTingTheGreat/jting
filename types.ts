@@ -5,31 +5,31 @@ export type exLink = {
 	type?: string;
 };
 
-type educationPage = {
+export type educationPage = {
 	title: string;
 	description: string;
 	children: Education[];
 };
 
-type experiencePage = {
+export type experiencePage = {
 	title: string;
 	description: string;
 	children: Experience[];
 };
 
-type projectPage = {
+export type projectPage = {
 	title: string;
 	description: string;
 	children: Project[];
 };
 
-type certificationPage = {
+export type certificationPage = {
 	title: string;
 	description: string;
 	children: Certification[];
 };
 
-type contactPage = {
+export type contactPage = {
 	title: string;
 	description: string;
 	children: {
@@ -46,11 +46,7 @@ export type internalPagesType = {
 	contact: contactPage;
 };
 
-export type Page = {
-	title: string;
-	description?: string;
-	children: (Education | Experience | Project | Certification)[];
-};
+export type Page = educationPage | experiencePage | projectPage | certificationPage | contactPage;
 
 export type Education = {
 	title: string;
