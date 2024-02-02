@@ -2,10 +2,8 @@ import Link from "next/link";
 import internalPages from "@/data/internalPages";
 
 const StringLink = ({ link }: { link: string }) => {
-	// ensure the link is lowercase
-	const lower = link.toLowerCase();
 	return (
-		<Link href={`#${lower}`} className="p-1 m-1 bg-black flex-1 text-center capitalize">
+		<Link href={`#${link.toLowerCase()}`} className="p-1 m-1 bg-black flex-1 text-center capitalize">
 			{link}
 		</Link>
 	);
