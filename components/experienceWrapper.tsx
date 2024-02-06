@@ -1,18 +1,27 @@
 import { Experience } from "@/types";
 import SectionWrapper from "./sectionWrapper";
+import ElementWrapper from "./elementWrapper";
 
 const ExperienceElement = ({ experience }: { experience: Experience }) => {
 	return (
-		<div>
-			<h3>{experience.title}</h3>
+		<ElementWrapper title={experience.title} subtitle={experience.company}>
+			<p>{experience.location}</p>
 			<p>{experience.company}</p>
-		</div>
+			<p>
+				{experience.startDate}-{experience.endDate}
+			</p>
+			<ul className="list-disc">
+				{experience.description.map((description) => (
+					<li key={description}>{description}</li>
+				))}
+			</ul>
+		</ElementWrapper>
 	);
 };
 
 const ExperienceWrapper = ({ title, experienceList }: { title: string; experienceList: Experience[] }) => {
 	return (
-		<SectionWrapper id={title}>
+		<SectionWrapper title={title}>
 			{experienceList.map((experience) => (
 				<ExperienceElement key={experience.title} experience={experience} />
 			))}

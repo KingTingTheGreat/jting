@@ -1,7 +1,7 @@
-const SectionWrapper = ({ id, children }: { id: string; children: React.ReactNode }) => {
+const SectionWrapper = ({ title, children }: { title: string; children: React.ReactNode }) => {
 	return (
-		<div id="id" className="flex flex-col items-center justify-center">
-			<h1 className="text-4xl font-bold capitalize">{id}</h1>
+		<div id="title" className="flex flex-col justify-center m-4 w-full">
+			<h1 className="text-5xl font-semibold capitalize">{title}</h1>
 			{children}
 		</div>
 	);

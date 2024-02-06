@@ -1,18 +1,30 @@
 import { Project } from "@/types";
 import SectionWrapper from "./sectionWrapper";
+import ElementWrapper from "./elementWrapper";
+import Link from "next/link";
 
 const ProjectElement = ({ project }: { project: Project }) => {
 	return (
-		<div>
-			<h3>{project.title}</h3>
+		<ElementWrapper title={project.title} subtitle={project.role}>
 			<p>{project.role}</p>
-		</div>
+			<Link href={project.link} target="_blank" className="text-linkBlue">
+				View Here
+			</Link>
+			<p>{project.description}</p>
+			<ul className="flex flex-wrap">
+				{project.technologies.map((technology) => (
+					<li key={technology} className="m-2 border-solid border-[#fff] rounded-md">
+						{technology}
+					</li>
+				))}
+			</ul>
+		</ElementWrapper>
 	);
 };
 
 const ProjectWrapper = ({ title, projectList }: { title: string; projectList: Project[] }) => {
 	return (
-		<SectionWrapper id={title}>
+		<SectionWrapper title={title}>
 			{projectList.map((project) => (
 				<ProjectElement key={project.title} project={project} />
 			))}

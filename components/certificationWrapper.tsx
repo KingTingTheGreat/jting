@@ -1,18 +1,24 @@
 import { Certification } from "@/types";
 import SectionWrapper from "./sectionWrapper";
+import Link from "next/link";
+import ElementWrapper from "./elementWrapper";
 
 const CertificationElement = ({ certification }: { certification: Certification }) => {
 	return (
-		<div>
-			<h3>{certification.title}</h3>
+		<ElementWrapper title={certification.title} subtitle={certification.organization}>
 			<p>{certification.organization}</p>
-		</div>
+			<p>Issued: {certification.issueDate}</p>
+			<Link href={certification.link} className="text-linkBlue underline">
+				link
+			</Link>
+			<p>{certification.description}</p>
+		</ElementWrapper>
 	);
 };
 
 const CertificationWrapper = ({ title, certificationList }: { title: string; certificationList: Certification[] }) => {
 	return (
-		<SectionWrapper id={title}>
+		<SectionWrapper title={title}>
 			{certificationList.map((certification) => (
 				<CertificationElement key={certification.title} certification={certification} />
 			))}

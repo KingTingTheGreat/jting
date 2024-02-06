@@ -54,6 +54,7 @@ export type Education = {
 	startDate: string;
 	endDate: string;
 	gpa: string;
+	relevantCoursework: string[];
 };
 
 export type Experience = {
@@ -62,7 +63,7 @@ export type Experience = {
 	endDate: string;
 	company: string;
 	location: string;
-	description: string;
+	description: string[];
 };
 
 export type Project = {
@@ -78,4 +79,5 @@ export type Certification = {
 	organization: string;
 	issueDate: string;
 	link: string;
+	description: string;
 };
