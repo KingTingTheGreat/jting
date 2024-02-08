@@ -5,9 +5,19 @@ import externalLinks from "@/data/externalLinks";
 
 const LinkWrapper = ({ link }: { link: exLink }) => {
 	return (
-		<div className="items-center text-center p-1.5 m-2 bg-black rounded-lg border-2 border-slate-700 border-solid cursor-pointer hover:border-blue-300">
+		<div className="items-center text-center p-1.5 m-2 bg-black rounded-lg border-2 border-slate-700 border-solid cursor-pointer transition hover:border-blue-300">
 			<Link href={link.url} target="_blank" type={link.type ?? ""}>
-				{link.image ? <Image src={link.image} alt={link.name} fill={true} objectFit="contain" /> : link.name}
+				{link.image ? (
+					<Image
+						src={link.image}
+						alt={link.name}
+						width={50}
+						height={50}
+						className="max-h-full aspect-square invert"
+					/>
+				) : (
+					link.name
+				)}
 			</Link>
 		</div>
 	);
@@ -15,7 +25,7 @@ const LinkWrapper = ({ link }: { link: exLink }) => {
 
 const AdditionalInfo = () => {
 	return (
-		<div className="flex items-center justify-between p-1 m-2">
+		<div className="flex flex-1 justify-end items-center p-1 m-2">
 			{externalLinks.map((link) => (
 				<LinkWrapper key={link.name} link={link} />
 			))}

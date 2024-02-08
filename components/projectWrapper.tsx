@@ -7,8 +7,8 @@ const ProjectElement = ({ project }: { project: Project }) => {
 	return (
 		<ElementWrapper title={project.title} subtitle={project.role}>
 			<p>{project.description}</p>
-			<Link href={project.link} target="_blank" className="text-linkBlue">
-				View Here
+			<Link href={project.link} target="_blank" className="text-blue-500 hover:underline">
+				View project here
 			</Link>
 			<ul className="flex flex-wrap">
 				{project.technologies.map((technology) => (

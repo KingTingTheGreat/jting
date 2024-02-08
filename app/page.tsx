@@ -6,7 +6,6 @@ import ProjectWrapper from "@/components/projectWrapper";
 
 export default function Home() {
 	return (
-		// <main className="flex flex-col items-center justify-between p-24 w-full">
 		<main className="flex flex-col items-center justify-between p-6 w-full">
 			<EducationWrapper title={internalPages.education.title} educationList={internalPages.education.children} />
 			<ExperienceWrapper

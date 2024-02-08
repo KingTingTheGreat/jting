@@ -13,7 +13,7 @@ const StringLink = ({ link }: { link: string }) => {
 
 const NavLinks = () => {
 	return (
-		<nav className="flex w-full justify-around bg-[#333]">
+		<nav className="flex w-full justify-around">
 			{Object.entries(internalPages).map(([key]) => (
 				<StringLink key={key} link={key} />
 			))}

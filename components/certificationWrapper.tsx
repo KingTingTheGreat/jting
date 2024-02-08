@@ -8,8 +8,8 @@ const CertificationElement = ({ certification }: { certification: Certification 
 		<ElementWrapper title={certification.title} subtitle={certification.organization}>
 			<p>Issued: {certification.issueDate}</p>
 			<p>{certification.description}</p>
-			<Link href={certification.link} className="text-linkBlue underline">
-				link
+			<Link href={certification.link} target="_blank" className="text-blue-500 hover:underline">
+				View certification here
 			</Link>
 		</ElementWrapper>
 	);
