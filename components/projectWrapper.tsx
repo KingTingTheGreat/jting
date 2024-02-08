@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ProjectElement = ({ project }: { project: Project }) => {
 	return (
-		<ElementWrapper title={project.title} subtitle={project.role} link={project.link}>
+		<ElementWrapper title={project.title} subtitle={project.role}>
 			<ul className="flex flex-wrap">
 				{project.technologies.map((technology) => (
 					<li key={technology} className="m-2 border-solid border-[#fff] rounded-md">
