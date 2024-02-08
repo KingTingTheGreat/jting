@@ -8,9 +8,9 @@
 }
 
 :root {
-	--foreground-rgb: 255, 255, 255;
-	--background-start-rgb: 25, 25, 25;
-	--background-end-rgb: 75, 75, 75;
+	--foreground-rgb: 125, 125, 125;
+	--background-start-rgb: 15, 15, 15;
+	--background-end-rgb: 35, 35, 35;
 }
 
 body {
