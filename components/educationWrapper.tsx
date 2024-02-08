@@ -6,7 +6,6 @@ import BulletPoint from "./bulletPoint";
 const EducationElement = ({ education }: { education: Education }) => {
 	return (
 		<ElementWrapper title={education.title} subtitle={education.school}>
-			<p>{education.school}</p>
 			<p>{education.gpa}</p>
 			<p>
 				{education.startDate}-{education.endDate}

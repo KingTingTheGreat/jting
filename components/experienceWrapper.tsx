@@ -7,7 +7,6 @@ const ExperienceElement = ({ experience }: { experience: Experience }) => {
 	return (
 		<ElementWrapper title={experience.title} subtitle={experience.company}>
 			<p>{experience.location}</p>
-			<p>{experience.company}</p>
 			<p>
 				{experience.startDate}-{experience.endDate}
 			</p>

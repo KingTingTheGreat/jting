@@ -6,12 +6,11 @@ import ElementWrapper from "./elementWrapper";
 const CertificationElement = ({ certification }: { certification: Certification }) => {
 	return (
 		<ElementWrapper title={certification.title} subtitle={certification.organization}>
-			<p>{certification.organization}</p>
 			<p>Issued: {certification.issueDate}</p>
+			<p>{certification.description}</p>
 			<Link href={certification.link} className="text-linkBlue underline">
 				link
 			</Link>
-			<p>{certification.description}</p>
 		</ElementWrapper>
 	);
 };
