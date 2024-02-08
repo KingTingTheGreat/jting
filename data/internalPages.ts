@@ -11,7 +11,7 @@ const internalPages: internalPagesType = {
 				school: "Boston University",
 				startDate: "September 2021",
 				endDate: "May 2025",
-				gpa: "4.8",
+				gpa: "3.8",
 				relevantCoursework: [
 					"Software Engineering",
 					"Web Application Development",
@@ -27,7 +27,7 @@ const internalPages: internalPagesType = {
 				],
 			},
 			{
-				title: "B.A Philosophy; minor Women's Gender and Sexuality Studies",
+				title: "B.A Philosophy + Women's Gender and Sexuality Studies",
 				school: "Boston University",
 				startDate: "September 2021",
 				endDate: "May 2025",
