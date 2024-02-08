@@ -1,6 +1,7 @@
 import { Education } from "@/types";
 import SectionWrapper from "./sectionWrapper";
 import ElementWrapper from "./elementWrapper";
+import BulletPoint from "./bulletPoint";
 
 const EducationElement = ({ education }: { education: Education }) => {
 	return (
@@ -11,9 +12,9 @@ const EducationElement = ({ education }: { education: Education }) => {
 				{education.startDate}-{education.endDate}
 			</p>
 			<h5 className="text-xl">Relevant Coursework</h5>
-			<ul className="list-disc">
+			<ul>
 				{education.relevantCoursework.map((course) => (
-					<li key={course}>{course}</li>
+					<BulletPoint key={course} content={course} />
 				))}
 			</ul>
 		</ElementWrapper>

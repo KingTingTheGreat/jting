@@ -1,6 +1,7 @@
 import { Experience } from "@/types";
 import SectionWrapper from "./sectionWrapper";
 import ElementWrapper from "./elementWrapper";
+import BulletPoint from "./bulletPoint";
 
 const ExperienceElement = ({ experience }: { experience: Experience }) => {
 	return (
@@ -10,9 +11,9 @@ const ExperienceElement = ({ experience }: { experience: Experience }) => {
 			<p>
 				{experience.startDate}-{experience.endDate}
 			</p>
-			<ul className="list-disc">
+			<ul>
 				{experience.description.map((description) => (
-					<li key={description}>{description}</li>
+					<BulletPoint key={description} content={description} />
 				))}
 			</ul>
 		</ElementWrapper>
