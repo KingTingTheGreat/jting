@@ -5,11 +5,7 @@ import Link from "next/link";
 
 const ProjectElement = ({ project }: { project: Project }) => {
 	return (
-		<ElementWrapper title={project.title} subtitle={project.role}>
-			<p>{project.description}</p>
-			<Link href={project.link} target="_blank" className="text-blue-500 hover:underline">
-				View project here
-			</Link>
+		<ElementWrapper title={project.title} subtitle={project.role} link={project.link}>
 			<ul className="flex flex-wrap">
 				{project.technologies.map((technology) => (
 					<li key={technology} className="m-2 border-solid border-[#fff] rounded-md">
@@ -17,6 +13,10 @@ const ProjectElement = ({ project }: { project: Project }) => {
 					</li>
 				))}
 			</ul>
+			<p>{project.description}</p>
+			<Link href={project.link} target="_blank" className="text-blue-500 hover:underline">
+				View project here
+			</Link>
 		</ElementWrapper>
 	);
 };
