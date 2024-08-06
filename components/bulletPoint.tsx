@@ -1,5 +1,5 @@
 const BulletPoint = ({ content }: { content: string }) => {
-	return <li>• {content}</li>;
+  return <li>• {content}</li>;
 };
 
 export default BulletPoint;
