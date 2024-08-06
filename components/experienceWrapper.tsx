@@ -2,6 +2,7 @@ import { Experience } from '@/types';
 import SectionWrapper from './sectionWrapper';
 import ElementWrapper from './elementWrapper';
 import BulletPoint from './bulletPoint';
+import experience from '@/data/experience';
 
 const ExperienceElement = ({ experience }: { experience: Experience }) => {
   return (
@@ -19,16 +20,13 @@ const ExperienceElement = ({ experience }: { experience: Experience }) => {
   );
 };
 
-const ExperienceWrapper = ({
-  title,
-  experienceList,
-}: {
-  title: string;
-  experienceList: Experience[];
-}) => {
+const ExperienceWrapper = () => {
   return (
-    <SectionWrapper title={title}>
-      {experienceList.map((experience) => (
+    <SectionWrapper
+      title={experience.title}
+      description={experience.description}
+    >
+      {experience.children.map((experience) => (
         <ExperienceElement key={experience.title} experience={experience} />
       ))}
     </SectionWrapper>

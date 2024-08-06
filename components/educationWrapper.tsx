@@ -2,6 +2,7 @@ import { Education } from '@/types';
 import SectionWrapper from './sectionWrapper';
 import ElementWrapper from './elementWrapper';
 import BulletPoint from './bulletPoint';
+import education from '@/data/education';
 
 const EducationElement = ({ education }: { education: Education }) => {
   return (
@@ -20,16 +21,10 @@ const EducationElement = ({ education }: { education: Education }) => {
   );
 };
 
-const EducationWrapper = ({
-  title,
-  educationList,
-}: {
-  title: string;
-  educationList: Education[];
-}) => {
+const EducationWrapper = () => {
   return (
-    <SectionWrapper title={title}>
-      {educationList.map((education) => (
+    <SectionWrapper title={education.title} description={education.description}>
+      {education.children.map((education) => (
         <EducationElement key={education.title} education={education} />
       ))}
     </SectionWrapper>

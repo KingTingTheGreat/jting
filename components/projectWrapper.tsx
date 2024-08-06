@@ -2,6 +2,7 @@ import { Project } from '@/types';
 import SectionWrapper from './sectionWrapper';
 import ElementWrapper from './elementWrapper';
 import Link from 'next/link';
+import projects from '@/data/projects';
 
 const ProjectElement = ({ project }: { project: Project }) => {
   return (
@@ -28,16 +29,10 @@ const ProjectElement = ({ project }: { project: Project }) => {
   );
 };
 
-const ProjectWrapper = ({
-  title,
-  projectList,
-}: {
-  title: string;
-  projectList: Project[];
-}) => {
+const ProjectWrapper = () => {
   return (
-    <SectionWrapper title={title}>
-      {projectList.map((project) => (
+    <SectionWrapper title={projects.title} description={projects.description}>
+      {projects.children.map((project) => (
         <ProjectElement key={project.title} project={project} />
       ))}
     </SectionWrapper>
