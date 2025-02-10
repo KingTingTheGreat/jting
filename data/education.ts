@@ -16,7 +16,6 @@ const education: educationPage = {
         'Web Application Development',
         'Functional Programming',
         'Design and Analysis of Algorithms',
-        'Data Structures and Algorithms',
         'Computer System Architecture',
         'Probabilistic Computing',
         'Discrete Mathematics',
